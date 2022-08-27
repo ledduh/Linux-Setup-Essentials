@@ -57,3 +57,5 @@ A docker image - a read only file with instructions.
 A docker container - is created when the instructions in a docker image are executed
 
 A docker file - a simple text file that consists of instructions to build docker images
+
+--Done--
