@@ -4,5 +4,5 @@ sudo apt-get dist-upgrade
 sudo nala autoremove
 sudo nala clean
 
---Done--
+echo "We are done Thank you"
 
