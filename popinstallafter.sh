@@ -18,4 +18,4 @@ sudo nala install vlc
 sudo nala install code
 
 
---Done--
+echo "We are done Thank You!!"
