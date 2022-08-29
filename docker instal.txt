@@ -58,4 +58,4 @@ A docker container - is created when the instructions in a docker image are exec
 
 A docker file - a simple text file that consists of instructions to build docker images
 
---Done--
+echo "We are done Thank you"
