@@ -1,0 +1,79 @@
+### SETUP OPENVPN IN AWS FREE TIER ###
+
+Using UBUNTU FREE TIER VM
+
+Create an account
+
+Spin up the vm
+
+Make sure you create a key pair and choose
+vms only that are free tier compatible
+
+change the permissions of the downloaded keypair
+
+"sudo chmod 400 yourkey.pem"
+
+ssh into your vm from your local machine
+
+"ssh -i key user@ip"
+
+Once in the vm
+
+Update the vm
+"sudo apt update && sudo apt upgrade"
+
+Download an openvpn installation script from github
+
+"wget https://git.io/vpn -O openvpn-install.sh"
+
+Make the script executable
+
+"sudo chmod +x openvpn-install.sh"
+
+Run the sript
+
+"sudo ./openvpn-install.sh"
+
+The following prompts will pop up
+
+Welcome to this OpenVPN road warrior installer!
+
+Which protocol should OpenVPN use?
+   1) UDP (recommended)
+   2) TCP
+Protocol [1]: 1
+
+What port should OpenVPN listen to?
+Port [1194]: 
+
+Select a DNS server for the clients:
+   1) Current system resolvers
+   2) Google
+   3) 1.1.1.1
+   4) OpenDNS
+   5) Quad9
+   6) AdGuard
+DNS server [1]: 2
+
+Enter a name for the first client:
+Name [client]: iphone
+
+OpenVPN installation is ready to begin.
+Press any key to continue...
+
+Afterthis confirm the vpn is up and running
+
+"sudo systemctl status openvpn-server@server.service"
+
+The .ovpn file in my case was saved on the root folder 
+
+-----
+Go to your client machine
+
+Copy the file from the server to your pc
+
+scp -i serverkey user@ip:filelocation
+
+Once the file is downloaded, download an openvpn client and connect using a file
+
+
