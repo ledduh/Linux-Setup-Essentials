@@ -1,4 +1,4 @@
-Monitoring Tool UPTIME KUMA SETUP
+##Monitoring Tool UPTIME KUMA SETUP##
 
 ##Install using cli installer
 curl -o kuma_install.sh http://git.kuma.pet/install.sh && sudo bash kuma_install.sh
