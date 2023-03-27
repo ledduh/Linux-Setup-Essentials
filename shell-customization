@@ -1,0 +1,39 @@
+#!/bin/bash
+
+#source https://github.com/ahampriyanshu/making-linux-terminal-awesome
+
+#Install Z-shell
+sudo apt install zsh
+
+#Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+#or 
+
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+#Install Nerd Fonts
+
+#https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf
+
+#Install Powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+
+
+#Change the default theme to ZSH_THEME="powerlevel10k/powerlevel10k" inside ~/.zshrc .Commit the changes by running
+#source ~/.zshrc --to save settings
+
+#Zsh autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+#Add zsh-autosuggestions to the list of plugins inside ~/.zshrc plugins=( [plugins...]).Commit the changes by running
+#Add as plugin
+#zsh-syntaxhighlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+#add as plugin
+
+#Cat alternative called bat
+sudo apt install bat
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
+
