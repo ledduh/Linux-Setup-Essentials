@@ -1,0 +1,19 @@
+Install openvpn aws
+
+
+Spin up a free tier ubuntu 22.04 server
+
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
+sudo apt autoclean
+
+wget https://raw.githubusercontent.com/Nyr/openvpn-install/master/openvpn-install.sh -O ubuntu-22.04-lts-vpn-server.sh
+
+make the downloaded file executable
+sudo chmod +x ubuntu-22.04-lts-vpn-server.sh
+sudo ./ubuntu-22.04-lts-vpn-server.sh
+Choose the default options
+Ensure you open the set port on your security groups > inbound rules on azure
+Once a client file is created copy it to your device
+Use openvpn client software and choose the file to connect to the vpn
