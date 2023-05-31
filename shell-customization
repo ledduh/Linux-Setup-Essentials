@@ -28,7 +28,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 #Add zsh-autosuggestions to the list of plugins inside ~/.zshrc plugins=( [plugins...]).Commit the changes by running
 #Add as plugin
-#zsh-syntaxhighlighting
+#zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 #add as plugin
 
