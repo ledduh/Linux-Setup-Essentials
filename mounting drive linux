@@ -1,0 +1,33 @@
+Mount Drive linux
+
+Find visible drives
+
+sudo lsblk
+
+RM 1 = External drive -USB
+RM 2 - Internal Drive
+
+Take not of the name and size of the disk
+sda 931.5G - on my machine
+
+Format to linux format
+
+sudo mkfs.ext4 /dev/name of drive
+Example 
+sudo mkfs.ext4 /dev/sda
+
+Create a folder on the drive where you will mount the disk
+Example sudo mkdir /media/mybackup
+
+Mount the drive
+sudo mount /dev/sda /media/bakdrive
+
+Persistently mount the drive
+
+add a line at the end of the fstab file
+
+sudo nano /etc/fstab
+
+UUID=your uuid /mountpoint ext4 defaults 0 3
+
+3 is the number of drives you have moounted. Dependent on how many drive you have
