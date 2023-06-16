@@ -17,5 +17,19 @@ sudo nala install vlc
 
 sudo nala install code
 
+sudo nala install fzf
+
+sudo nala install neofetch
+
+sudo nala install btop
+
+sudo nala install ffmpeg #file converter
+
+sudo nala install gdu #file storage usage app
+
+sudo nala install lolcat #rainbow effect on terminal
+#example ls | grep lolcat
+
+sudo nala install speedtest-cli #speedtest on terminal
 
 echo "We are done Thank You!!"
