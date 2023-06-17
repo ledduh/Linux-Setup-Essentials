@@ -32,4 +32,5 @@ sudo nala install lolcat #rainbow effect on terminal
 
 sudo nala install speedtest-cli #speedtest on terminal
 
+sudo nala install duf #file storage checker like df
 echo "We are done Thank You!!"
