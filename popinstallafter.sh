@@ -33,4 +33,8 @@ sudo nala install lolcat #rainbow effect on terminal
 sudo nala install speedtest-cli #speedtest on terminal
 
 sudo nala install duf #file storage checker like df
+
+sudo nala install tldr #modernlike man pages
+tldr -u
+
 echo "We are done Thank You!!"
