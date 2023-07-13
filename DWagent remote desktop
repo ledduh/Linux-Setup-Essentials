@@ -1,0 +1,21 @@
+Download the script from https://www.dwservice.net/en/
+
+For linux 
+
+install the downloaded sh script
+
+sudo chmod +x dwagent.sh
+
+sudo ./dwagent.sh
+
+install and follow the prompts until the section where you add a code..
+
+Create an account on dwagent
+Login
+
+Add a group
+Add an agent - this will generate a code
+
+Insert the code in the machine where you installed the .sh file
+
+Done
