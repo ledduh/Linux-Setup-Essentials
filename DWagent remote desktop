@@ -1,5 +1,7 @@
 Download the script from https://www.dwservice.net/en/
 
+wget https://www.dwservice.net/download/dwagent.sh
+
 For linux 
 
 install the downloaded sh script
