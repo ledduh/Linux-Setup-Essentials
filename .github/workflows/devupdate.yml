@@ -1,4 +1,4 @@
-name: Update Dev Branch on Push
+name: Update Current Branch
 
 on:
   push:
@@ -6,21 +6,22 @@ on:
       - '*'
 
 jobs:
-  update_dev_branch:
+  update_branch:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      
-    - name: Authenticate with PAT
-      run: |
-        git config --global user.email "ledduh@github.com"
-        git config --global user.name "ledduh"
-        git remote set-url origin "https://${{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}}@github.com/${{ github.repository }}"
-      
-    - name: Switch to dev branch
-      run: git checkout docker
-      
+
+    - name: Get current branch name
+      id: get_branch
+      run: echo "::set-output name=branch::$(echo ${GITHUB_REF#refs/heads/})"
+
+    - name: Switch to updated branch
+      run: git checkout ${{ steps.get_branch.outputs.branch }}
+
     - name: Pull latest changes
-      run: git pull origin docker
+      run: git pull origin ${{ steps.get_branch.outputs.branch }}
+
+    - name: Push changes to updated branch
+      run: git push origin ${{ steps.get_branch.outputs.branch }}
