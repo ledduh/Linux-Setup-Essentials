@@ -13,6 +13,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       
+    - name: Authenticate with PAT
+      run: |
+        git config --global user.email "ledduh@github.com"
+        git config --global user.name "ledduh"
+        git remote set-url origin "https://${{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}}@github.com/${{ github.repository }}"
+      
     - name: Switch to dev branch
       run: git checkout docker
       
