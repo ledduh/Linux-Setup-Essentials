@@ -1,0 +1,20 @@
+name: Update Dev Branch on Push
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  update_dev_branch:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Switch to dev branch
+      run: git checkout docker
+      
+    - name: Pull latest changes
+      run: git pull origin docker
