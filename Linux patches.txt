@@ -21,3 +21,15 @@ then install the one with recommended in its text
 For my case
 
 sudo apt install nvidia-driver-530
+
+or 
+
+#to install all recommended drivers
+
+sudo ubuntu-drivers autoinstall  
+
+sudo reboot
+
+#to check current driver
+
+run nvidia-smi
