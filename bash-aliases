@@ -1,0 +1,14 @@
+#create bash aliases or custom commands in terminal
+
+#create a file in the root folder called .bash_aliases
+
+sudo mkdir .bash_aliases
+
+#add an alias example below
+alias update = 'sudo apt update' 
+
+#To apply the alias changes run 
+sudo source .bash_aliases
+
+#Test the alias
+update
