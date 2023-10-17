@@ -1,6 +1,9 @@
 #sudo apt install conky-all
 #sudo cp conky.config ~/.conkyrc
-
+#paste the config below --my-preference
+#Go to startup applications - add new add name and command
+#under command add /usr/bin/conky
+#sudo reboot
 conky.config = {
 	
 	update_interval = 1,
