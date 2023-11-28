@@ -1,0 +1,20 @@
+
+Building Intersystems Iris Containers
+
+Create an account on their portal
+https://containers.intersystems.com/contents
+
+Login
+Choose the container you wish to use
+
+Create an account on dockerhub
+
+login to docker on terminal 
+
+docker login -u="allan@afyarekod.com" -p="waFid3YcP0NRoXXmrSZlAogca5Rc26UOrZgrj95HXekb" containers.intersystems.com
+
+ sudo docker run -d -p 32558:52773  --name iriscommunity containers.intersystems.com/intersystems/irishealth-community:latest-em
+ 
+ Access on the browser via
+ 
+ http://192.168.200.141:32558/csp/sys/UtilHome.csp
