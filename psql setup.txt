@@ -1,0 +1,17 @@
+Install Postgres
+
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+
+sudo -u postgres psql
+CREATE USER your_user WITH PASSWORD 'your_password';
+psql -U your_user -h localhost
+CREATE DATABASE your_database;
+
+//REmote access
+sudo nano /etc/postgresql/<version>/main/postgresql.conf
+listen_addresses = '*'
+sudo nano /etc/postgresql/<version>/main/pg_hba.conf
+host    all    all    0.0.0.0/0    md5
+sudo systemctl restart postgresql
+psql -h <postgres_server_ip> -U <username> -d <database>
