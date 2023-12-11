@@ -1,0 +1,17 @@
+# Display the current disk space
+df -h
+
+# List the logical volumes
+lvdisplay
+
+# Extend the logical volume to 200GB
+lvextend -L 200G /dev/vg_name/lv_name
+
+# Resize the ext4 file system
+resize2fs /dev/vg_name/lv_name
+
+# Display the current disk space
+df -h
+
+# List the logical volumes
+lvdisplay
