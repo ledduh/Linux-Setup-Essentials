@@ -1,0 +1,23 @@
+#!/bin/bash
+
+sudo apt-get update
+sudo apt-get install zsh
+read -p "Enter the username: " username
+sudo chsh -s /bin/zsh "$username"
+sudo apt install git fonts-font-awesome
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+source ~/.zshrc
+
+#Reconfigure p10 theme
+#p10k configure
+
+#Add autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+#Syntax Highlighting
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
